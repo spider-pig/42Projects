@@ -9,34 +9,23 @@
 /*   Updated: 2021/06/20 18:17:55 by cleticia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-
-# include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
-# include <sys/param.h>
-# include <sys/resource.h>
+# include <unistd.h>
 
-# define READ_LINE		1
-# define ERROR			-1
-# define NEW_LINE		1
-# define NO_NEW_LINE	0
+# define SUCCESS       1
+# define END_OF_FILE   0
+# define ERROR         -1
+# define CONTINUE_READ -2
 
-typedef	struct	s_get_next_line
-{
-	char		read[BUFFER_SIZE + 1];
-	char		*temp;
-	char		*break_line_ptr;
-	int			read_return;
-}				t_gnl;
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 256
+# endif
 
-int				get_next_line(int fd, char **line);
-char			*ft_strchr(const char *s, int c);
-char			*ft_strjoin(char const *s1, char const *s2);
-size_t			ft_strlen(const char *s);
-char			*ft_strdup(const char *s);
-void			*ft_memset(void *s, int c, size_t n);
+int        get_next_line(int fd, char **line);
+char   *ft_strdup(const char *s);
+char   *ft_substr(char const *s, unsigned int start, size_t len);
+size_t ft_strlen(const char *s);
+char   *ft_strchr(const char *s, int c);
+char   *ft_strjoin(char const *s1, char const *s2);
 
 #endif
