@@ -12,26 +12,31 @@
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFFER_SIZE 50
-# define FLDS 65535
 
-#include <fcntl.h>
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
+# include <sys/param.h>
+# include <sys/resource.h>
 
-# define R_LINE 1
-# define R_EOF 0
-# define R_ERROR -1
+# define READ_LINE		1
+# define ERROR			-1
+# define NEW_LINE		1
+# define NO_NEW_LINE	0
 
-int		get_next_line(int fd, char **line);
+typedef	struct	s_get_next_line
+{
+	char		read[BUFFER_SIZE + 1];
+	char		*temp;
+	char		*break_line_ptr;
+	int			read_return;
+}				t_gnl;
 
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-size_t	ft_strlen(const char *s);
-char	*ft_strdup(const char *s1);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strchr(const char *s, int c);
-
+int				get_next_line(int fd, char **line);
+char			*ft_strchr(const char *s, int c);
+char			*ft_strjoin(char const *s1, char const *s2);
+size_t			ft_strlen(const char *s);
+char			*ft_strdup(const char *s);
+void			*ft_memset(void *s, int c, size_t n);
 
 #endif
