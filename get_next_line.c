@@ -6,11 +6,9 @@
 /*   By: cleticia <cleticia@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 16:20:52 by cleticia          #+#    #+#             */
-/*   Updated: 2021/06/20 18:15:47 by cleticia         ###   ########.fr       */
+/*   Updated: 2021/06/20 22:17:24 by cleticia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "get_next_line.h"
 
 #include "get_next_line.h"
 
