@@ -12,93 +12,106 @@
 
 #include "get_next_line.h"
 
-void	*setter(void *b, int c, size_t len)
-{
-	unsigned char	*test;
-	size_t			t;
+#include "get_next_line.h"
 
-	t = 0;
-	test = (unsigned char *)b;
-	while (t < len)
+static int	join_line_and_save(char **line, char **save)
+{
+	char	*tmp;
+	char	*newline_ptr;
+
+	if ((newline_ptr = ft_strchr(*save, '\n')))
 	{
-		test[t] = (unsigned char)c;
-		t++;
-	}
-	return (b);
-}
-
-void *zelloc(size_t size)
-{
-	char *ptr;
-	size_t i;
-
-	if (!(ptr = (char*)malloc(size)))
-		return (NULL);
-	i = -1;
-	while (++i < size)
-		*(ptr + i) = 0;
-	return (ptr);
-}
-
-static	int	find_nl(int fd, char **buf, char **line)
-{
-	char		*new_line;
-	char		*tmp;
-
-	new_line = ft_strchr(buf[fd], '\n');
-	while (new_line)
-	{
-		tmp = buf[fd];
-		*new_line = '\0';
-		*line = ft_substr(buf[fd], 0, new_line - buf[fd]);
-		buf[fd] = ft_strdup(new_line + 1);
+		tmp = *line;
+		*line = ft_substr(*save, 0, newline_ptr - *save);
 		free(tmp);
-		return (1);
+		if (!(*line))
+			return (ERROR);
+		tmp = *save;
+		*save = ft_substr(newline_ptr + 1, 0, ft_strlen(newline_ptr + 1));
+		free(tmp);
+		if (!(*save))
+			return (ERROR);
+		return (SUCCESS);
 	}
-	while (*buf[fd])
+	else
 	{
-		*line = (char *)malloc(sizeof(char) * (ft_strlen(buf[fd] + 1)));
-		*line =  ft_strdup(buf[fd]);
-		buf[fd] = zelloc(BUFFER_SIZE + 1);
-		return (1);
+		tmp = *line;
+		*line = *save;
+		*save = NULL;
+		free(tmp);
+		return (CONTINUE_READ);
 	}
-	return (0);
 }
 
-static	int	ft_read(int fd, char **line)
+static int	split_by_newline(char **line, char **save, char *buf)
 {
-	char		*buf;
-	char		*tmp;
-	int			i;
+	char	*old_line;
+	char	*tmp;
+	char	*newline_ptr;
 
-	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	while ((i = read(fd, buf, BUFFER_SIZE)) > 0)
+	newline_ptr = ft_strchr(buf, '\n');
+	if (!(tmp = ft_substr(buf, 0, newline_ptr - buf)))
+		return (ERROR);
+	old_line = *line;
+	*line = ft_strjoin(*line, tmp);
+	free(old_line);
+	free(tmp);
+	if (!(*line))
+		return (ERROR);
+	if (!(*save = ft_substr(newline_ptr + 1, 0,
+								ft_strlen(newline_ptr + 1))))
+		return (ERROR);
+	return (SUCCESS);
+}
+
+static int	join_line_and_buf(char **line, char *buf)
+{
+	char	*tmp;
+
+	tmp = *line;
+	*line = ft_strjoin(*line, buf);
+	free(tmp);
+	if (!(*line))
+		return (ERROR);
+	return (CONTINUE_READ);
+}
+
+static int	read_process(int fd, char **line, char **save)
+{
+	ssize_t		read_size;
+	int			ret;
+	char		*buf;
+
+	ret = CONTINUE_READ;
+	if (!(buf = malloc(BUFFER_SIZE + 1)))
+		return (ERROR);
+	while (ret == CONTINUE_READ && (read_size = read(fd, buf, BUFFER_SIZE)) > 0)
 	{
-		if (!line[fd])
-		{
-			line[fd] = (char *)malloc(sizeof(char) * (ft_strlen(buf) + 1));
-			line[fd] = ft_strdup(&buf[fd]);
-		}
+		buf[read_size] = '\0';
+		if (ft_strchr(buf, '\n'))
+			ret = split_by_newline(line, save, buf);
 		else
-		{
-			tmp = line[fd];
-			line[fd] = ft_strjoin(line[fd], buf);
-			free(tmp);
-		}
-		setter(buf, 0, BUFFER_SIZE);		
+			ret = join_line_and_buf(line, buf);
 	}
 	free(buf);
-	return (i);
+	if (ret == CONTINUE_READ && read_size == 0)
+		ret = END_OF_FILE;
+	else if (ret == CONTINUE_READ && read_size == -1)
+		ret = ERROR;
+	return (ret);
 }
 
-int			get_next_line(const int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
-	static	char	*buf[FLDS];
+	int			ret;
+	static char	*save;
 
-	if (!line || fd < 0 || BUFFER_SIZE < 0
-	||(ft_read(fd, &buf[fd]) < 0) || fd > FLDS)
-		return (-1);
-	if (find_nl(fd, &buf[fd], line) == 1)
-		return (1);
-	return (0);
+	if (fd < 0 || !line || BUFFER_SIZE <= 0 || !(*line = ft_strdup("")))
+		return (ERROR);
+	ret = CONTINUE_READ;
+	if (save)
+		ret = join_line_and_save(line, &save);
+	if (ret == CONTINUE_READ)
+		ret = read_process(fd, line, &save);
+	return (ret);
 }
