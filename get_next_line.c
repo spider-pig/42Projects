@@ -30,9 +30,7 @@ char	*strjoin_free(char *s1, char *s2)
 	int		s2_len;
 	char	*new_str;
 
-	if (!s1)
-		return (ft_strdup(s2));
-	if (!s2)
+	if (s2 == 0)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
