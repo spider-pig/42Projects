@@ -12,24 +12,24 @@
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-//
-# define BUFFER_SIZE 100
-# define FD 65535
 
 # include <stdlib.h>
 # include <unistd.h>
 
-# define SUCCESS		1
-# define END_OF_FILE	0
-# define ERROR			-1
-# define CONTINUE_READ	-2
+# define R_LINE 1
+# define R_EOF 0
+# define R_ERROR -1
 
 int		get_next_line(int fd, char **line);
 
-char	*ft_strdup(const char *s);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strjoin(char const *s1, char const *s2);
+void	ft_strcpy(char *dst, const char *src, size_t dstsize);
+char	*ft_strdup(const char *s1);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+int		findchr(const char *s, char c);
+char	*strjoin_free(char *s1, char *s2);
+int		strcpy_line_bl(char **line, char *str, int i, char *buff);
+int		get_read(int fd, char **line, char *buff, char **str);
 
 #endif
