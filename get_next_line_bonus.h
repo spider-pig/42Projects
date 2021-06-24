@@ -19,6 +19,11 @@
 # include <stddef.h>
 
 
+# define MAX_FD 1024
+# define R_LINE 1
+# define R_EOF 0
+# define R_ERROR -1
+
 typedef struct s_memory
 {
 	int				fd;
