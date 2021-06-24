@@ -24,12 +24,6 @@
 # define R_EOF 0
 # define R_ERROR -1
 
-typedef struct s_memory
-{
-	int				fd;
-	char			*content;
-	struct s_memory	*next;
-}		t_memory;
 
 char	*ft_strdup(char *src);
 
