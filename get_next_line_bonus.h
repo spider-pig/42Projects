@@ -12,33 +12,30 @@
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
-
-# include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <stddef.h>
+# define BUFFER_SIZE	32
 
-# define SUCCESS		1
-# define END_OF_FILE	0
-# define ERROR			-1
-# define CONTINUE_READ	-2
-# define FD_MAX 4096
-
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 256
-#endif
-
-typedef struct s_list
+typedef struct s_memory
 {
-	int	fd;
-	char *save;
-	struct s_list *next;
-}	t_list;
+	int				fd;
+	char			*content;
+	struct s_memory	*next;
+}		t_memory;
+
+char	*ft_strdup(char *src);
+
+char	*ft_strjoin(char const *s1, char const *s2);
+
+void	*ft_calloc(size_t nmemb, size_t size);
+
+size_t	ft_strlen(char const *str);
+
+void	*ft_memccpy(void *dest, void *src, int c, size_t n);
 
 int		get_next_line(int fd, char **line);
-
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strjoin(char const *s1, char const *s2);
-t_list	*create_fd_elem(t_list **lst, int fd);
 
 #endif
