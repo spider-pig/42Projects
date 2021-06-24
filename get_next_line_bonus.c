@@ -12,122 +12,127 @@
 
 #include "get_next_line_bonus.h"
 
-static int	join_line_and_save(char **line, char **save)
+static int	get_read(int bread, char **buffer, t_memory **mem, int fd)
 {
-	char	*tmp;
+	t_memory	*ptr;
+	t_memory	*ptr_previous;
 
-	if (ft_strchr(*save, '\n'))
+	if (bread > 0)
+		return (1);
+	free(*buffer);
+	ptr = *mem;
+	ptr_previous = NULL;
+	while (ptr->fd != fd)
 	{
-		tmp = *line;
-		*line = ft_substr(*save, 0, ft_strchr(*save, '\n') - *save);
-		free(tmp);
-		if (!(*line))
-			return (ERROR);
-		tmp = *save;
-		*save = ft_substr(ft_strchr(*save, '\n') + 1, 0, ft_strlen(ft_strchr(*save, '\n' + 1)));
-		free(tmp);
-		if (!(*save))
-			return (ERROR);
-		return (SUCCESS);
+		ptr_previous = ptr;
+		ptr = ptr->next;
 	}
+	if (ptr_previous)
+		ptr_previous->next = ptr->next;
 	else
+		*mem = (*mem)->next;
+	free(ptr->content);
+	ptr->content = NULL;
+	free(ptr);
+	ptr = NULL;
+	return (bread);
+}
+
+static int	get_one_line(int bread, char **line, char **buffer, char **saved)
+{
+	char	*found_break;
+	char	*line_temp;
+	char	*linecpy;
+	int		is_finished;
+
+	line_temp = ft_calloc(bread + 1, sizeof(char));
+	linecpy = *line;
+	found_break = ft_memccpy(line_temp, *buffer, '\n', bread);
+	is_finished = 0;
+	if (found_break)
 	{
-		tmp = *line;
-		*line = *save;
-		*save = NULL;
-		free(tmp);
-		return (CONTINUE_READ);
+		if (*saved)
+			free(*saved);
+		*saved = ft_strdup(found_break);
+		is_finished = 1;
 	}
+	*line = ft_strjoin(linecpy, line_temp);
+	free(*buffer);
+	free(line_temp);
+	free(linecpy);
+	return (is_finished);
 }
 
-static int	split_by_newline(char **line, char **save, char *buf)
+static int	get_saved_content(char **line, char **saved)
 {
-	char	*old_line;
-	char	*tmp;
+	int		is_finished;
+	char	*saved_temp;
 
-	if (!(tmp = ft_substr(buf, 0, ft_strchr(buf, '\n') - buf)))
-		return (ERROR);
-	old_line = *line;
-	*line = ft_strjoin(*line, tmp);
-	free(old_line);
-	free(tmp);
-	if (!(*line))
-		return (ERROR);
-	if (!(*save = ft_substr(ft_strchr(buf, '\n') + 1, 0,
-								ft_strlen(ft_strchr(buf, '\n') + 1))))
-		return (ERROR);
-	return (SUCCESS);
-}
-
-static int	join_line_and_buf(char **line, char *buf)
-{
-	char	*tmp;
-
-	tmp = *line;
-	*line = ft_strjoin(*line, buf);
-	free(tmp);
-	if (!(*line))
-		return (ERROR);
-	return (CONTINUE_READ);
-}
-
-static int	read_process(int fd, char **line, char **save)
-{
-	ssize_t		read_size;
-	int			ret;
-	char		*buf;
-
-	ret = CONTINUE_READ;
-	if (!(buf = malloc(BUFFER_SIZE + 1)))
-		return (ERROR);
-	while (ret == CONTINUE_READ && (read_size = read(fd, buf, BUFFER_SIZE)) > 0)
+	if (!line)
+		return (-1);
+	*line = ft_calloc(1, sizeof(char));
+	if (!*line)
+		return (-1);
+	saved_temp = NULL;
+	while (*saved && **saved != '\0')
 	{
-		buf[read_size] = '\0';
-		if (ft_strchr(buf, '\n'))
-			ret = split_by_newline(line, save, buf);
-		else
-			ret = join_line_and_buf(line, buf);
+		is_finished = get_one_line(ft_strlen(*saved), line, saved, &saved_temp);
+		*saved = saved_temp;
+		if (is_finished == 1)
+			return (1);
 	}
-	free(buf);
-	if (ret == CONTINUE_READ && read_size == 0)
-		ret = END_OF_FILE;
-	else if (ret == CONTINUE_READ && read_size == -1)
-		ret = ERROR;
-	return (ret);
+	return (0);
 }
 
-int			get_next_line(int fd, char **line)
+static char	**get_memory(int fd, t_memory **mem)
 {
-	int		ret;
-	static	t_list *save_list_head;
-	t_list	*target_save_list;
+	t_memory		*ptr;
 
-	if (fd < 0 || !line || BUFFER_SIZE <= 0 || !(*line = ft_substr("", 0, 0)))
-		return (ERROR);
-	target_save_list = save_list_head;
-	while (target_save_list && target_save_list ->fd != fd)
-			target_save_list = target_save_list ->next;
-	if (!target_save_list)
-		if(!(target_save_list = create_fd_elem(&save_list_head, fd)))
-				return (ERROR);
-	ret = CONTINUE_READ;
-	if (target_save_list->save)
-		ret = join_line_and_save(line, &target_save_list->save);
-	if (ret == CONTINUE_READ)		
-		ret = read_process(fd, line, &target_save_list->save);
-	if (ret == END_OF_FILE || ret == ERROR)
+	if (!*mem)
 	{
-		free(target_save_list->save);
-		if(save_list_head == target_save_list)
-		save_list_head = target_save_list->next;
-		else
+		*mem = ft_calloc(1, sizeof(t_memory));
+		(*mem)->fd = fd;
+		return (&(*mem)->content);
+	}
+	ptr = *mem;
+	while (ptr->next)
+	{
+		if (ptr->fd == fd)
+			return (&(ptr->content));
+		ptr = ptr->next;
+	}
+	if (ptr->fd == fd)
+		return (&(ptr->content));
+	ptr->next = ft_calloc(1, sizeof(t_memory));
+	ptr->next->fd = fd;
+	return (&(ptr->next->content));
+}
+
+int	get_next_line(int fd, char **line)
+{
+	static t_memory	*mem;
+	char			**saved;
+	char			*buffer;
+	int				bread;
+	int				is_finished;
+
+	saved = get_memory(fd, &mem);
+	is_finished = get_saved_content(line, saved);
+	while (is_finished == 0)
+	{
+		buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
+		bread = read(fd, buffer, BUFFER_SIZE);
+		is_finished = get_read(bread, &buffer, &mem, fd);
+		if (is_finished == 0)
+			return (is_finished);
+		else if (is_finished == -1)
 		{
-			t_list *tmp = save_list_head;
-			while (tmp->next != target_save_list)
-			tmp = tmp->next;
-			tmp->next = target_save_list->next;
+			free(*line);
+			*line = NULL;
+			return (is_finished);
 		}
-		free(target_save_list);
+		buffer[bread] = '\0';
+		is_finished = get_one_line(bread, line, &buffer, saved);
 	}
-	return (ret);
+	return (is_finished);
 }
