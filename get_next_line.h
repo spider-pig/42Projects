@@ -16,7 +16,10 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <stddef.h>
-# define BUFFER_SIZE	32
+
+# define R_LINE 1
+# define R_EOF 0
+# define R_ERROR -1
 
 char	*ft_strdup(char *src);
 
