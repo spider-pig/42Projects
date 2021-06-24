@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <stddef.h>
-# define BUFFER_SIZE	32
+
 
 typedef struct s_memory
 {
