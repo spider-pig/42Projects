@@ -12,93 +12,89 @@
 
 #include "get_next_line.h"
 
-int		findchr(const char *s, char c)
+static int	get_read(int bread, char **buffer, char **saved, char **line)
 {
-	int		i;
-
-	i = 0;
-	while (*(s + i) && *(s + i) != c)
-		i++;
-	if (*(s + i) != c)
-		return (-1);
-	return (i);
-}
-
-char	*strjoin_free(char *s1, char *s2)
-{
-	int		s1_len;
-	int		s2_len;
-	char	*new_str;
-
-	if (s2 == 0)
-		return (NULL);
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	if (!(new_str = (char *)malloc((s1_len + s2_len + 1) * sizeof(char))))
-		return (NULL);
-	ft_strcpy(new_str, s1, s1_len + 1);
-	free(s1);
-	s1 = NULL;
-	ft_strcpy(new_str + s1_len, s2, s2_len + 1);
-	*(new_str + (s1_len + s2_len)) = '\0';
-	return (new_str);
-}
-
-int		strcpy_line_bl(char **line, char *str, int i, char *buff)
-{
-	int str_len;
-
-	free(buff);
-	str_len = ft_strlen(str);
-	*line = ft_substr(str, 0, i);
-	i++;
-	ft_strcpy(str, str + i, str_len + 1);
-	return (1);
-}
-
-int		get_read(int fd, char **line, char *buff, char **str)
-{
-	int	index_bl;
-	int	ret;
-
-	while ((ret = read(fd, buff, BUFFER_SIZE)) > 0)
-	{
-		*(buff + ret) = '\0';
-		if (*str)
-			*str = strjoin_free(*str, buff);
-		else
-			*str = ft_strdup(buff);
-		if ((index_bl = findchr(*str, '\n')) != -1)
-		{
-			strcpy_line_bl(line, *str, index_bl, buff);
-			return (-42);
-		}
-	}
-	return (ret);
-}
-
-int		get_next_line(int fd, char **line)
-{
-	static char	*str = NULL;
-	char		*buff;
-	int			ret;
-	int			index;
-
-	if (fd < 0 || !line || BUFFER_SIZE < 1 || read(fd, str, 0) < 0
-			|| !(buff = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1))))
-		return (R_ERROR);
-	if (str && (index = findchr(str, '\n')) != -1)
-		return (strcpy_line_bl(line, str, index, buff));
-	if ((ret = get_read(fd, line, buff, &str)) == -42)
+	if (bread > 0)
 		return (1);
-	free(buff);
-	if (str)
+	free(*buffer);
+	if (*saved)
 	{
-		*line = ft_strdup(str);
-		free(str);
-		str = NULL;
-		return (ret);
+		free(*saved);
+		*saved = NULL;
 	}
-	*line = ft_strdup("");
-	return (ret);
+	if (bread == -1)
+	{
+		free(*line);
+		*line = NULL;
+	}
+	return (bread);
+}
+
+static int	get_one_line(int bread, char **line, char **buffer, char **saved)
+{
+	char	*found_break;
+	char	*line_temp;
+	char	*linecpy;
+	int		is_finished;
+
+	line_temp = ft_calloc(bread + 1, sizeof(char));
+	linecpy = *line;
+	found_break = ft_memccpy(line_temp, *buffer, '\n', bread);
+	is_finished = 0;
+	if (found_break)
+	{
+		if (*saved)
+			free(*saved);
+		*saved = ft_strdup(found_break);
+		is_finished = 1;
+	}
+	*line = ft_strjoin(linecpy, line_temp);
+	free(*buffer);
+	free(line_temp);
+	free(linecpy);
+	return (is_finished);
+}
+
+static int	get_saved(char **line, char **saved)
+{
+	int		is_finished;
+	char	*saved_temp;
+
+	if (!line)
+		return (-1);
+	*line = ft_calloc(1, sizeof(char));
+	if (!*line)
+		return (-1);
+	saved_temp = NULL;
+	while (*saved && **saved != '\0')
+	{
+		is_finished = get_one_line(ft_strlen(*saved), line, saved, &saved_temp);
+		*saved = saved_temp;
+		if (is_finished == 1)
+			return (1);
+	}
+	return (0);
+}
+
+int	get_next_line(int fd, char **line)
+{
+	static char	*saved;
+	char		*buffer;
+	int			bread;
+	int			is_finished;
+
+	is_finished = get_saved(line, &saved);
+	if (is_finished == -1 || is_finished == 1)
+		return (is_finished);
+	while (is_finished == 0)
+	{
+		buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
+		bread = read(fd, buffer, BUFFER_SIZE);
+		is_finished = get_read(bread, &buffer, &saved, line);
+		if (is_finished <= 0)
+			return (is_finished);
+		buffer[bread] = '\0';
+		is_finished = get_one_line(bread, line, &buffer, &saved);
+	}
+	return (1);
 }
