@@ -12,63 +12,93 @@
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(char const *str)
 {
-	size_t len;
+	size_t	size;
 
-	len = 0;
-	while (*(s + len))
-		len++;
-	return (len);
+	size = 0;
+	while (str[size] != '\0')
+		size++;
+	return (size);
 }
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(char *src)
 {
-	size_t	len;
-	char	*s_alloc;
+	char	*src_copy;
+	int		count;
 
-	len = ft_strlen(s1) + 1;
-	if (!(s_alloc = (char *)malloc(len * sizeof(char))))
+	src_copy = malloc(ft_strlen(src) + 1);
+	if (!src_copy)
 		return (NULL);
-	ft_strcpy(s_alloc, s1, len);
-	return (s_alloc);
+	count = 0;
+	while (src[count] != '\0')
+	{
+		src_copy[count] = src[count];
+		count++;
+	}
+	src_copy[count] = '\0';
+	return (src_copy);
 }
 
-void	ft_strcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
+	char	*str;
+	int		len_str;
+	int		i;
+	int		j;
 
-	if (!dst || !src)
-		return ;
+	if (!s1 || !s2)
+		return (NULL);
+	len_str = ft_strlen((char *)s1) + ft_strlen((char *)s2);
+	str = malloc(sizeof(char) * (len_str + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
-	while (*(src + i) && dstsize && i + 1 < dstsize)
+	while (s1[i] != '\0')
 	{
-		*(dst + i) = *(src + i);
+		str[i] = s1[i];
 		i++;
 	}
-	*(dst + i) = '\0';
+	j = 0;
+	while (i + j < len_str)
+	{
+		str[i + j] = s2[j];
+		j++;
+	}
+	str[i + j] = '\0';
+	return (str);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*substr;
-	char	*new_str;
-	size_t	s_len;
-	size_t	i;
+	void	*ptr;
+	size_t	count;
 
-	s_len = ft_strlen(s);
-	if (s == NULL || s_len < start)
-		return (ft_strdup(""));
-	if (start + len < s_len)
-		substr = (char *)malloc((len + 1) * sizeof(char));
-	else
-		substr = (char *)malloc((s_len - start + 1) * sizeof(char));
-	if (substr == NULL)
-		return (NULL);
-	i = start;
-	new_str = substr;
-	while (i < (start + len) && *(s + i))
-		*new_str++ = *(s + i++);
-	*new_str = '\0';
-	return (substr);
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return (ptr);
+	count = 0;
+	while (count < nmemb * size)
+	{
+		((unsigned char *)ptr)[count] = (unsigned char) 0;
+		count++;
+	}
+	return (ptr);
 }
+
+void	*ft_memccpy(void *dest, void *src, int c, size_t n)
+{
+	size_t	count;
+
+	count = 0;
+	while (count < n && ((unsigned char *)src)[count] != (unsigned char)c)
+	{
+		((unsigned char *)dest)[count] = ((unsigned char *)src)[count];
+		count++;
+	}
+	if (count == n)
+		return (NULL);
+	((unsigned char *)dest)[count] = '\0';
+	return ((unsigned char *)(src + count + 1));
+}
+
