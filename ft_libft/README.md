@@ -43,8 +43,8 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strncpy.c"><code>ft_strncpy*</code></a> : copy a string from the string pointed to, by src to dest.<br>
 <a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strdup.c"><code>ft_strdup</code></a> : save a copy of a string.<br>
 <a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strndup.c"><code>ft_strndup*</code></a> : save a copy of a string (with malloc, limited by lenght).<br>
-<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strcat.c"><code>ft_strcat*</code></a> : concatenates strings.<br>
-<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strncat.c"><code>ft_strncat*</code></a> : concatenates strings.<br>
+<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strcat.c"><code>ft_strcat*</code></a> : concatenate strings.<br>
+<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strncat.c"><code>ft_strncat*</code></a> : concatenate strings.<br>
 <a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strlcpy.c"><code>ft_strlcpy</code></a> : copy of string limited by lenght.<br>
 <a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strlcat.c"><code>ft_strlcat</code></a> : concatenate a string limited by lenght.<br>
 
