@@ -1,4 +1,4 @@
-![Born2beroot](https://github.com/carlarfranca/42Projects/blob/eb8ec3ef61bfcf2eb782fd81ccdf1abf285b62dc/born2beroot/banner-2(1).png)
+![Born2beroot](https://github.com/carlarfranca/42Projects/blob/32c32d088fea90764cc762631ca2fcf693d8b95e/born2beroot/banner-2(1).png)
 # 
 
 This Project consists of creating a machine in VirtualBox, configuring the operating system itself, tools such as firewall, ssh and sudo.<br>
