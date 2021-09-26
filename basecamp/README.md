@@ -1,7 +1,7 @@
 
+![basecamp42](https://github.com/carlarfranca/42Projects/blob/459d3516256f5d92779e39e1caf3494a0e81ecb1/basecamp/BASECAMP.png)
 
-|**📌 Functions**|
-|  :----------   |
+### 📌 Functions
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c01/ft_putstr.c"><code>ft_putstr</code></a> - writes the string.<br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c00/ft_is_negative.c"><code>ft_is_negative</code></a> - writes negative or positive char.<br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c00/ft_print_alphabet.c"><code>ft_print_alphabet</code></a> - displays alphabet. <br>
@@ -36,10 +36,10 @@
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c02/ft_strupcase.c"><code>ft_strupcase</code></a> - displays uppercase string. <br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c03/ft_strcat.c"><code>ft_strcat</code></a> - concatenates the specified string. <br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c03/ft_strcmp.c"><code>ft_strcmp</code></a> - swap integer values. <br>
-<a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c03/ft_strlcat.c"><code>ft_strlcat</code></a> - appends the NUL-terminated string src to the end of dst.  <br>
+<a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c03/ft_strlcat.c"><code>ft_strlcat</code></a> - appends the NULL - terminated string src to the end of dst. <br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c03/ft_strncat.c"><code>ft_strncat</code></a> - appends the string pointed to by src to the end of the string. <br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c03/ft_strncmp.c"><code>ft_strncmp</code></a> - compare characters of two strings. <br>
-<a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c03/ft_strstr.c"><code>ft_strstr</code></a> -  finds the first occurrence of the substring needle.<br>
+<a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c03/ft_strstr.c"><code>ft_strstr</code></a> - finds the first occurrence of the substring needle.<br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c04/ft_atoi.c"><code>ft_atoi</code></a> - changes an alphanumeric to interger.<br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c04/ft_atoi_base.c"><code>ft_atoi_base</code></a> - changes an alphanumeric to interger.<br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c04/ft_putnbr.c"><code>ft_putnbr</code></a> - displays number with a write function. <br>
@@ -53,4 +53,4 @@
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c05/ft_iterative_power.c"><code>ft_iterative_power</code></a> - recursive function. <br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c05/ft_recursive_factorial.c"><code>ft_recursive_factorial</code></a> - returns a factorial recursively. <br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c05/ft_recursive_power.c"><code>ft_recursive_power</code></a> - displays a recursive function. <br>
-<a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c05/ft_sqrt.c"><code>ft_sqrt</code></a> - calculate an integer recursively.  <br>
+<a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c05/ft_sqrt.c"><code>ft_sqrt</code></a> - calculate an integer recursively. <br>
