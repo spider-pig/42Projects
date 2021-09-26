@@ -20,3 +20,10 @@ void	ft_print_alphabet(void)
 	while (++c <= 122)
 		write (1, &c, 1);
 }
+/*
+**int	main(void)
+**{
+** ft_print_alphabet();
+** return (0);
+**}
+*/
