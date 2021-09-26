@@ -24,17 +24,3 @@ void	ft_is_negative(int n)
 	else
 		ft_putchar('N');		
 }
-
-/*
-**int main(void)
-**{
-**	int i;
-**	i = -1;
-**	while (i != 2)
-**	{
-**		ft_is_negative(i);
-**		i++;
-**	}
-**	return (0);
-**}
-*/
