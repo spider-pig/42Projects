@@ -1,5 +1,7 @@
-## 📌 Functions
 
+
+|**📌 Functions**|
+|  :----------   |
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c01/ft_putstr.c"><code>ft_putstr</code></a> - writes the string.<br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c00/ft_is_negative.c"><code>ft_is_negative</code></a> - writes negative or positive char.<br>
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c00/ft_print_alphabet.c"><code>ft_print_alphabet</code></a> - displays alphabet. <br>
