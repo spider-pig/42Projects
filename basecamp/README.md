@@ -1,3 +1,5 @@
+![basecamp](https://github.com/carlarfranca/42Projects/blob/459edfc4f3168e4e80cd9048ca80231c46f6a66e/basecamp/BASECAMP.png)
+###### *Photo by Ken Cheung on* [Unsplash](https://unsplash.com/photos/TEriGq5ywYA)
 
 ### 📌 Functions
 <a href="https://github.com/carlalrfranca/42_Projects/blob/main/basecamp/c01/ft_putstr.c"><code>ft_putstr</code></a> - writes the string.<br>
