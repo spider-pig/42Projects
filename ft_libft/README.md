@@ -68,5 +68,5 @@ The aim of this project is to recreate of the Standard C Library and some additi
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_printf/libft/ft_count_unsign.c"><code>ft_count_unsign</code></a> : counts numbers of digits.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_printf/libft/ft_itohex.c"><code>ft_itohex</code></a> : itoa function with a unsigned argument for hexadecimal.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_printf/libft/ft_putnbr_unsig.c"><code>ft_putnbr_unsig</code></a> : putnbr function with a unsigned argument.|
-|<a href="https://github.com/carlarfranca/42Projects/blob/cb146a59bde13cfb0ab3e797c44126e614f0cbed/ft_libft/Libft_Commented/ft_strcmp.c"><code>ft_strcmp</code></a> : |
-|<a href="https://github.com/carlarfranca/42Projects/blob/83136e84bb1e48358ddab4064336bd90dd313dba/ft_libft/Libft_Commented/ft_strcpy.c"><code>ft_strcpy</code></a> : |
+|<a href="https://github.com/carlarfranca/42Projects/blob/cb146a59bde13cfb0ab3e797c44126e614f0cbed/ft_libft/Libft_Commented/ft_strcmp.c"><code>ft_strcmp</code></a> : Compare two strings |
+|<a href="https://github.com/carlarfranca/42Projects/blob/83136e84bb1e48358ddab4064336bd90dd313dba/ft_libft/Libft_Commented/ft_strcpy.c"><code>ft_strcpy</code></a> : Copy one string to another |
