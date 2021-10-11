@@ -68,3 +68,5 @@ The aim of this project is to recreate of the Standard C Library and some additi
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_printf/libft/ft_count_unsign.c"><code>ft_count_unsign</code></a> : counts numbers of digits.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_printf/libft/ft_itohex.c"><code>ft_itohex</code></a> : itoa function with a unsigned argument for hexadecimal.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_printf/libft/ft_putnbr_unsig.c"><code>ft_putnbr_unsig</code></a> : putnbr function with a unsigned argument.|
+|<a href=""><code>ft_strcmp</code></a> : |
+|<a href=""><code>ft_strcpy</code></a> : |
