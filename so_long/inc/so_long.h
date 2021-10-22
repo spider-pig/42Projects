@@ -25,17 +25,17 @@
 typedef struct s_background
 {
 	void	*ptr_img;
-	int		*data;
-	int		line_size;
-	int		bpp;
-	int		endian;
+	int	*data;
+	int	line_size;
+	int	bpp;
+	int	endian;
 }	t_background;
 
 typedef struct s_mlx
 {
 	t_background	back;
-	void			*mlx_ptr;
-	void			*win;
+	void		*mlx_ptr;
+	void		*win;
 }	t_mlx;
 
 typedef struct s_image
@@ -51,14 +51,14 @@ typedef struct s_map
 	struct s_image	img;
 	struct s_mlx	mlx;
 	char			**map;
-	int				collect;
-	int				counter;
-	int				empty;
-	int				height;
-	int				width;
-	int				x;
-	int				y;
-	int				fd;
+	int			collect;
+	int			counter;
+	int			empty;
+	int			height;
+	int			width;
+	int			x;
+	int			y;
+	int			fd;
 }	t_map;
 
 enum e_keycode
@@ -79,10 +79,10 @@ typedef struct s_check
 	int	gamer;
 }	t_check;
 
-int		paint_map(t_map *map);
-int		event_key(int keycode, t_map *map);
-int		minimize_window(t_map *map);
-int		end_program(t_map *map);
+int	paint_map(t_map *map);
+int	event_key(int keycode, t_map *map);
+int	minimize_window(t_map *map);
+int	end_program(t_map *map);
 void	parsing_map(t_map *map, char *filename);
 void	so_long(char *filename);
 void	verif_map(t_map *map);
