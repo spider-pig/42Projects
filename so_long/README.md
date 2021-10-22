@@ -13,6 +13,6 @@ The purpose of this project is to develop a very small 2D game using minilibX - 
   ``` W ``` up <br>
   ``` A ``` left <br>
   ``` S ``` down <br>
-  ``` D ```right <br>
+  ``` D ``` right <br>
         
   Pressing ESC or clicking on the red cross for close window. <br>
