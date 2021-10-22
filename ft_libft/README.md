@@ -6,7 +6,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <br>
 <br>
 
-| **📌 C Library - <ctype.h>**| 
+| **📌 C Library  ``` <ctype.h> ``` **| 
 |  :---   |
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_isalnum.c"><code>ft_isalnum</code></a> : checks whether the passed character is alphanumeric.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_isalpha.c"><code>ft_isalpha</code></a> : checks whether the passed character is alphabetic.|
@@ -16,10 +16,10 @@ The aim of this project is to recreate of the Standard C Library and some additi
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_isprint.c"><code>ft_isprint</code></a> : checks whether the passed character is printable.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_tolower.c"><code>ft_tolower</code></a> : converts uppercase letters to lowercase.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_toupper.c"><code>ft_toupper</code></a> : checks whether the passed character is lowercase letter.|
-| **📌 C Library - <stdlib.h>** |
+| **📌 C Library  ``` <stdlib.h> ```** |
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_atoi.c"><code>ft_atoi</code></a> : converts the string pointed to, by the argument str to an integer (type int).|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_calloc.c"><code>ft_calloc</code></a> : allocates the requested memory and returns a pointer to it.|
-| **📌 C Library - <strings.h>**|
+| **📌 C Library ``` <strings.h> ```**|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_bzero.c"><code>ft_bzero</code></a> : writes zeros to a byte string. |
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_memset.c"><code>ft_memset</code></a> : writes one byte in a bytes string.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_memchr.c"><code>ft_memchr</code></a> : scan memory for a character.|
@@ -27,7 +27,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_memmove.c"><code>ft_memmove</code></a> : copy byte string.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_memcpy.c"><code>ft_memcpy</code></a> : copy an memory area.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_memccpy.c"><code>ft_memccpy</code></a> : copy string until found a character.|
-|**📌 C Library - <string.h>**|
+|**📌 C Library ``` <string.h> ```**|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strlen.c"><code>ft_strlen</code></a> : finds the length of a string.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strchr.c"><code>ft_strchr</code></a> : searches for the first occurrence of the character c.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_strrchr.c"><code>ft_strrchr</code></a> : searches for the last occurrence of the character c.|
