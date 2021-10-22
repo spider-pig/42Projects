@@ -6,7 +6,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <br>
 <br>
 
-| **📌 C Library  ``` <ctype.h> ``` **| 
+| **📌 C Library  ``` <ctype.h> ```**| 
 |  :---   |
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_isalnum.c"><code>ft_isalnum</code></a> : checks whether the passed character is alphanumeric.|
 |<a href="https://github.com/CarlalrFranca/42_Projects/blob/main/ft_libft/Libft_Commented/ft_isalpha.c"><code>ft_isalpha</code></a> : checks whether the passed character is alphabetic.|
