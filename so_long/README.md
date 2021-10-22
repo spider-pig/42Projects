@@ -2,6 +2,7 @@
 
 
 ## Project Information
+<pre>
 
     The purpose of this project is to develop a very small 2D game using minilibX - a library graphic functions.
 
@@ -18,4 +19,4 @@
     		D right
 
 	Pressing ESC or clicking on the red cross for close window.
-
+</pre>
