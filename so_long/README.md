@@ -3,8 +3,13 @@
 ## Project Information
 
 The purpose of this project is to develop a very small 2D game using minilibX - a library graphic functions.
+<br>
+<br>
 
-#### Compilation and rules
+![so_long](https://github.com/carlarfranca/so_long/blob/07894cb2cadcc50a3aec9d3913a42301dded02b1/mae_so_long.gif)
+<br>
+
+### Instructions
 
   ➜ Clone repo <br>
   ➜ Compile files with command ```make```<br>
