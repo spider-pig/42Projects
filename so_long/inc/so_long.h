@@ -50,15 +50,15 @@ typedef struct s_map
 {
 	struct s_image	img;
 	struct s_mlx	mlx;
-	char			**map;
-	int			collect;
-	int			counter;
-	int			empty;
-	int			height;
-	int			width;
-	int			x;
-	int			y;
-	int			fd;
+	char	**map;
+	int	collect;
+	int	counter;
+	int	empty;
+	int	height;
+	int	width;
+	int	x;
+	int	y;
+	int	fd;
 }	t_map;
 
 enum e_keycode
