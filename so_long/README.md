@@ -21,4 +21,4 @@ The purpose of this project is to develop a very small 2D game using minilibX - 
   ``` S ``` down <br>
   ``` D ``` right <br>
         
-  ➜ Pressing ESC or clicking on the red cross for close window. <br>
+  ➜ Pressing ESC or clicking on the red cross to close window. <br>
