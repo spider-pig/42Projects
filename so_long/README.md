@@ -2,8 +2,8 @@
 
 ## Project Information
 
-The purpose of this project is to develop a very small 2D game using minilibX - a library graphic functions.
-<br>
+The purpose of this project is to develop a very small 2D game using minilibX - a graphic library which enables: <br>
+Get keyboard and mouse input, manages screen, keyboard and mouse. <br>
 <br>
 
 ![so_long](https://github.com/carlarfranca/so_long/blob/07894cb2cadcc50a3aec9d3913a42301dded02b1/mae_so_long.gif)
@@ -13,7 +13,7 @@ The purpose of this project is to develop a very small 2D game using minilibX - 
 
   ➜ Clone repo <br>
   ➜ Compile files with ```make```<br>
-  ➜ For execute the ```file so_long.out```  typing ```./so_long ./maps/map1.ber ``` <br>
+  ➜ To execute the ```file so_long.out```  typing ```./so_long ./maps/map1.ber ``` <br>
   ➜ ```W,A,S,D``` keys will be used to move the main character <br>
 
   ``` W ``` up <br>
@@ -21,4 +21,4 @@ The purpose of this project is to develop a very small 2D game using minilibX - 
   ``` S ``` down <br>
   ``` D ``` right <br>
         
-  ➜ Pressing ESC or clicking on the red cross to close window. <br>
+  ➜ Pressing ESC or clicking on the red cross to close the window. <br>
