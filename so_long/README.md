@@ -19,5 +19,3 @@
 
 		Pressing ESC or clicking on the red cross for close window.
 </pre>
-
-	![So_Long](https:)
