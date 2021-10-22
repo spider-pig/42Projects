@@ -1,6 +1,3 @@
-![So_Long](https://github.com/carlarfranca/so_long/blob/96dfbb0a0661ff6452d5b40ae71b4a058642a08b/so_long.gif)
-
-
 ## Project Information
 <pre>
 
@@ -20,3 +17,4 @@
 
 	Pressing ESC or clicking on the red cross for close window.
 </pre>
+<!-- ![So_Long](https://github.com/carlarfranca/so_long/blob/96dfbb0a0661ff6452d5b40ae71b4a058642a08b/so_long.gif) -->
