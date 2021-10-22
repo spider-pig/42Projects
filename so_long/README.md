@@ -18,6 +18,6 @@
     		D right
 
 		Pressing ESC or clicking on the red cross for close window.
-
-	![So_Long](https://github.com/carlarfranca/so_long/blob/96dfbb0a0661ff6452d5b40ae71b4a058642a08b/So_long.gif)
 </pre>
+
+	![So_Long](https:)
