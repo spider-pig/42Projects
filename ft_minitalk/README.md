@@ -14,7 +14,8 @@ The purpose of this project is to code a small data exchange program using UNIX 
 
 ### Compilation
 Clone [`Libft`](https://github.com/carlarfranca/42Projects/tree/main/ft_libft/Libft_Commented) repo  in the `src` folder; <br>
-#### In the terminal <br>
-Type `make` to compile files; <br>
-`./server` and `./client [pid number] "string"` on simultaneous terminals to start the program.<br>
+`make` to compile files; <br>
+
+### Implementation 
+`./server` and `./client [pid number] "string"` on simultaneous terminals to start program.<br>
 `make fclean` to remove objects and binary files <br>
