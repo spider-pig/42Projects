@@ -3,7 +3,7 @@
 
 This Project consists of creating a machine in VirtualBox, configuring the operating system itself, tools such as firewall, ssh and sudo.<br>
 
-#### 🤔 General Info
+#### General Info
 
 [`SSH`](https://www.techtarget.com/searchsecurity/definition/Secure-Shell) <br>
 [`UFW`](https://help.ubuntu.com/community/UFW) <br>
@@ -15,9 +15,8 @@ This Project consists of creating a machine in VirtualBox, configuring the opera
 [`AppArmor & SELinux`](https://omarine.org/blog/apparmor-vs-selinux/) <br>
 
 
-
-<!-- 🚧
- **📌 Comando úteis** <br>
--->
-
-
+#### Utils
+`status` - sudo awk -F ":" '{print $1}' /etc/passwd  <br>
+`status users` - sudo getent group (group) <br>
+`status` - hostnamectl status <br>
+`status IP host` - hostname -I <br>
