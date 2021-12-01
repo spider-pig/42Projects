@@ -13,8 +13,8 @@ The purpose of this project is to code a small data exchange program using UNIX 
 [`SIGUSR1 & SIGUSR2`](https://www.gnu.org/software/libc/manual/html_node/Miscellaneous-Signals.html)<br>
 
 ### Compilation
-Clone [`Libft`](https://github.com/carlarfranca/42Projects/tree/main/ft_libft/Libft_Commented) repo  in the `src` folder; <br>
-`make` to compile files; <br>
+Clone [`Libft`](https://github.com/carlarfranca/42Projects/tree/main/ft_libft/Libft_Commented) repo  in the `src` folder <br>
+`make` to compile files <br>
 
 ### Implementation 
 `./server` and `./client [pid number] "string"` on simultaneous terminals to start program.<br>
