@@ -17,4 +17,4 @@ Clone [`Libft`](https://github.com/carlarfranca/42Projects/tree/main/ft_libft/Li
 #### In the terminal <br>
 Type `make` to compile files; <br>
 `./server` and `./client [pid number] "string"` on simultaneous terminals to start the program.<br>
-`make fclean` to delete the executables.
+`make fclean` to remove objects and binary files <br>
