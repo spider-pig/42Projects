@@ -1,2 +1,2 @@
 # 42_Projects
- This repository contains all projects of learning at Ecole 42
+This repository contains all projects developed for École42. 
