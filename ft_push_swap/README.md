@@ -1,7 +1,8 @@
 ![(https://github.com/42Paris/minilibx-linux/actions/workflows/ci.yml/badge.svg)](https://img.shields.io/badge/norminette-100%25-green)
 
 # Push_Swap
-A program that sorts input numbers using a data structure consisting of two A and B stacks and provided instructions. The numbers are inserted in stack A and, after sorting using stack B as auxiliary, they must be stored in A. 
+A program that sorts input numbers using a data structure consisting of two A and B stacks and provided instructions. <br>
+The numbers are inserted in stack A and, after sorting using stack B as auxiliary, they must be stored in A. 
 
 ### Functions
 [`read`](https://man7.org/linux/man-pages/man2/read.2.html) <br>
@@ -19,7 +20,9 @@ A program that sorts input numbers using a data structure consisting of two A an
 `make fclean` to remove objects and binary files <br>
 
 ### Implemetation 
-###### (just replace 100 with another value)
-MYVAR=$(seq 100 | shuf) <br>
-./push_swap $MYVAR <br>
-echo $MYVAR <br>
+(just replace 100 with another value)
+<pre>
+MYVAR=$(seq 100 | shuf)
+./push_swap $MYVAR
+echo $MYVAR
+</pre>
