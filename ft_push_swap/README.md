@@ -19,8 +19,8 @@ The numbers are inserted in stack A and, after sorting using stack B as auxiliar
 `make clean` to remove objects <br>
 `make fclean` to remove objects and binary files <br>
 
-### Implemetation 
-(just replace 100 with another value)
+### Implemetation
+`to change the number of inputs just replace 100 with another value`
 <pre>
 MYVAR=$(seq 100 | shuf)
 ./push_swap $MYVAR
