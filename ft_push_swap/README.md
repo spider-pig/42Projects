@@ -21,8 +21,7 @@ The numbers are inserted in stack A and, after sorting using stack B as auxiliar
 
 ### Implemetation
 `to change the number of inputs just replace 100 with another value`
-<pre>
-MYVAR=$(seq 100 | shuf)
-./push_swap $MYVAR
-echo $MYVAR
-</pre>
+
+`MYVAR=$(seq 100 | shuf)`
+`./push_swap $MYVAR`
+`echo $MYVAR`
