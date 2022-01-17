@@ -9,9 +9,9 @@ A program that sorts input numbers using a data structure consisting of two A an
 [`free`](https://man7.org/linux/man-pages/man1/free.1.html) <br>
 
 ### General Info
-[Linked List](https://www.programiz.com/dsa/linked-list) <br>
-[Radix Sort](https://www.programiz.com/dsa/radix-sort) <br>
-[int max & int min](https://www.journaldev.com/41151/int-max-min-c-plus-plus) <br>
+[`Linked List`](https://www.programiz.com/dsa/linked-list) <br>
+[`Radix Sort`](https://www.programiz.com/dsa/radix-sort) <br>
+[`int max & int min`](https://www.journaldev.com/41151/int-max-min-c-plus-plus) <br>
 
 ### Compilation
 `make` to compile <br>
