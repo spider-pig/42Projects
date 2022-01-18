@@ -13,7 +13,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 
 ## General Info
 
-** C Library  `<ctype.h>`**
+**C Library  `<ctype.h>`**
 
 <a href="https://github.com/carlarfranca/42Projects/blob/dfd1e1a7d0b7a9b3470a99777464cf39d1690d7d/ft_libft/Libft_Commented/ft_atoi.c"><code>ft_isalnum</code></a> : checks whether the passed character is alphanumeric.<br>
 <a href="https://github.com/carlarfranca/42Projects/blob/58e1c1574f0131f28a9cf9de7ccab5d3cc01e606/ft_libft/Libft_Commented/ft_isalpha.c"><code>ft_isalpha</code></a> : checks whether the passed character is alphabetic.<br>
@@ -24,12 +24,12 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_tolower.c"><code>ft_tolower</code></a> : converts uppercase letters to lowercase.<br>
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_toupper.c"><code>ft_toupper</code></a> : checks whether the passed character is lowercase letter.<br>
 
-** C Library  ``` <stdlib.h> ```** 
+**C Library  ``` <stdlib.h> ```** 
 
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_atoi.c"><code>ft_atoi</code></a> : converts the string pointed to, by the argument str to an integer (type int). <br>
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_calloc.c"><code>ft_calloc</code></a> : allocates the requested memory and returns a pointer to it. <br>
 
-** C Library ``` <strings.h> ```**
+**C Library ``` <strings.h> ```**
 
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_bzero.c"><code>ft_bzero</code></a> : writes zeros to a byte string. <br>
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_memset.c"><code>ft_memset</code></a> : writes one byte in a bytes string. <br>
@@ -39,7 +39,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_memcpy.c"><code>ft_memcpy</code></a> : copy an memory area. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_memccpy.c"><code>ft_memccpy</code></a> : copy string until found a character. <br>
 
-** C Library ``` <string.h> ```**
+**C Library ``` <string.h> ```**
 
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strlen.c"><code>ft_strlen</code></a> : finds the length of a string. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strchr.c"><code>ft_strchr</code></a> : searches for the first occurrence of the character c. <br>
@@ -58,7 +58,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strlcpy.c"><code>ft_strlcpy</code></a> : copy of string limited by lenght.<br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strlcat.c"><code>ft_strlcat</code></a> : concatenate a string limited by lenght.<br>
 
-** Non-standard**
+**Non-standard**
 
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_putchar_fd.c"><code>ft_putchar_fd</code></a> : produces a character for a especific file. <br>
 <a href="https://github.com/carlarfranca/42Projects/blob/main/basecamp/c01/ft_putstr.c"><code>ft_putstr*</code></a> : output string to stdout.<br>
@@ -72,7 +72,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strmapi.c"><code>ft_strmapi</code></a> : applies a function to each character of a string. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strjoin.c"><code>ft_strjoin</code></a> : concatenates two strings into a new string. <br>
 
-** Linked List**
+**Linked List**
 
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_lstnew.c"><code>ft_lstnew</code></a> : creates a new list. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_lstsize.c"><code>ft_lstsize</code></a> : counts list elements. <br>
@@ -84,7 +84,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_lstiter.c"><code>ft_lstiter</code></a> : applies a function to each element of a list. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_lstmap.c"><code>ft_lstmap</code></a> : applies a function to each element of a list. <br>
 
-** Additional** 
+**Additional** 
 
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_printf/libft/ft_count_unsign.c"><code>ft_count_unsign</code></a> : counts numbers of digits. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_printf/libft/ft_itohex.c"><code>ft_itohex</code></a> : itoa function with a unsigned argument for hexadecimal. <br>
