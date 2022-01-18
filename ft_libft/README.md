@@ -24,11 +24,13 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_toupper.c"><code>ft_toupper</code></a> : checks whether the passed character is lowercase letter.<br>
 <br>
 
+
 **C Library  ``` <stdlib.h> ```** 
 
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_atoi.c"><code>ft_atoi</code></a> : converts the string pointed to, by the argument str to an integer (type int). <br>
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_calloc.c"><code>ft_calloc</code></a> : allocates the requested memory and returns a pointer to it. <br>
 <br>
+
 
 **C Library ``` <strings.h> ```**
 
@@ -39,7 +41,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_memmove.c"><code>ft_memmove</code></a> : copy byte string. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_memcpy.c"><code>ft_memcpy</code></a> : copy an memory area. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_memccpy.c"><code>ft_memccpy</code></a> : copy string until found a character. <br>
-
+<br>
 
 **C Library ``` <string.h> ```**
 
@@ -96,3 +98,4 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_printf/libft/ft_putnbr_unsig.c"><code>ft_putnbr_unsig</code></a> : putnbr function with a unsigned argument. <br>
 <a href="https://github.com/carlarfranca/42Projects/blob/cb146a59bde13cfb0ab3e797c44126e614f0cbed/ft_libft/Libft_Commented/ft_strcmp.c"><code>ft_strcmp</code></a> : Compare two strings  <br>
 <a href="https://github.com/carlarfranca/42Projects/blob/83136e84bb1e48358ddab4064336bd90dd313dba/ft_libft/Libft_Commented/ft_strcpy.c"><code>ft_strcpy</code></a> : Copy one string to another <br>
+<br>
