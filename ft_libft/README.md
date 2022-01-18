@@ -1,9 +1,8 @@
 ![(https://github.com/42Paris/minilibx-linux/actions/workflows/ci.yml/badge.svg)](https://img.shields.io/badge/norminette-100%25-green)
 
-## 📚LIBft
+## LIBft
 
 The aim of this project is to recreate of the Standard C Library and some additional functions.
-
 
 ## Compilation
 
@@ -24,10 +23,12 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_tolower.c"><code>ft_tolower</code></a> : converts uppercase letters to lowercase.<br>
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_toupper.c"><code>ft_toupper</code></a> : checks whether the passed character is lowercase letter.<br>
 
+
 **C Library  ``` <stdlib.h> ```** 
 
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_atoi.c"><code>ft_atoi</code></a> : converts the string pointed to, by the argument str to an integer (type int). <br>
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_calloc.c"><code>ft_calloc</code></a> : allocates the requested memory and returns a pointer to it. <br>
+
 
 **C Library ``` <strings.h> ```**
 
@@ -38,6 +39,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_memmove.c"><code>ft_memmove</code></a> : copy byte string. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_memcpy.c"><code>ft_memcpy</code></a> : copy an memory area. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_memccpy.c"><code>ft_memccpy</code></a> : copy string until found a character. <br>
+
 
 **C Library ``` <string.h> ```**
 
@@ -58,6 +60,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strlcpy.c"><code>ft_strlcpy</code></a> : copy of string limited by lenght.<br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strlcat.c"><code>ft_strlcat</code></a> : concatenate a string limited by lenght.<br>
 
+
 **Non-standard**
 
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_putchar_fd.c"><code>ft_putchar_fd</code></a> : produces a character for a especific file. <br>
@@ -72,6 +75,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strmapi.c"><code>ft_strmapi</code></a> : applies a function to each character of a string. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_strjoin.c"><code>ft_strjoin</code></a> : concatenates two strings into a new string. <br>
 
+
 **Linked List**
 
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_lstnew.c"><code>ft_lstnew</code></a> : creates a new list. <br>
@@ -83,6 +87,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_lstclear.c"><code>ft_lstclear</code></a> : deletes and free list. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_lstiter.c"><code>ft_lstiter</code></a> : applies a function to each element of a list. <br>
 <a href="https://github.com/CarlarFranca/42Projects/blob/main/ft_libft/Libft_Commented/ft_lstmap.c"><code>ft_lstmap</code></a> : applies a function to each element of a list. <br>
+
 
 **Additional** 
 
