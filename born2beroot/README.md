@@ -15,7 +15,7 @@ This Project consists of creating a machine in VirtualBox, configuring the opera
 
 
 #### Utils
-`status` - sudo awk -F ":" '{print $1}' /etc/passwd  <br>
-`users` - sudo getent group (group) <br>
-`hostname` - hostnamectl status <br>
-`IP host` - hostname -I <br>
+`status` sudo awk -F ":" '{print $1}' /etc/passwd  <br>
+`users` sudo getent group (group) <br>
+`hostname` hostnamectl status <br>
+`IP host` hostname -I <br>
