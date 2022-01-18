@@ -2,3 +2,16 @@
 
 ## Ft_printf
 This project reproduces the behaviour of real printf function.
+
+### Functions
+[`read`](https://man7.org/linux/man-pages/man2/read.2.html) <br>
+[`malloc`](https://man7.org/linux/man-pages/man3/free.3.html) <br>
+[`free`](https://man7.org/linux/man-pages/man1/free.1.html) <br>
+
+### Compilation
+`make` to compile <br>
+`make clean` to remove objects <br>
+`make fclean` to remove objects and binary files <br>
+
+### Implemetation
+`./ft_printf`  <br>
