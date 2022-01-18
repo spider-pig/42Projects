@@ -1,9 +1,8 @@
 ![(https://github.com/42Paris/minilibx-linux/actions/workflows/ci.yml/badge.svg)](https://img.shields.io/badge/norminette-100%25-green)
 
-## LIBft
+# LIBft
 
 The aim of this project is to recreate of the Standard C Library and some additional functions.
-
 
 ## Compilation
 
