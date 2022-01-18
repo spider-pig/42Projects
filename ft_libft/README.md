@@ -23,7 +23,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_tolower.c"><code>ft_tolower</code></a> : converts uppercase letters to lowercase<br>
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_toupper.c"><code>ft_toupper</code></a> : checks whether the passed character is lowercase letter<br>
 
-**C Library `<stdlib.h>` ** 
+**C Library `<stdlib.h>`** 
 
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_atoi.c"><code>ft_atoi</code></a> : converts the string pointed to, by the argument str to an integer (type int)<br>
 <a href="https://github.com/carlarfranca/42Projects/blob/8717f6ee7b3f62bac5b995d3cb67d444b2bf4b82/ft_libft/Libft_Commented/ft_calloc.c"><code>ft_calloc</code></a> : allocates the requested memory and returns a pointer to it<br>
