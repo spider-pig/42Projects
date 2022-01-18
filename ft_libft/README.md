@@ -10,7 +10,7 @@ The aim of this project is to recreate of the Standard C Library and some additi
 `make clean` to remove objects <br>
 `make fclean` to remove objects and binary files <br>
 
-## General Info
+## Functions
 
 **C Library  `<ctype.h>`**
 
