@@ -1,4 +1,4 @@
-## Born2beroot
+# Born2beroot
 
 This Project consists of creating a machine in VirtualBox, configuring the operating system itself, tools such as firewall, ssh and sudo.<br>
 
