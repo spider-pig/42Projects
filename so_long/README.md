@@ -1,6 +1,6 @@
 ![(https://github.com/42Paris/minilibx-linux/actions/workflows/ci.yml/badge.svg)](https://img.shields.io/badge/norminette-100%25-green)
 
-## So_long
+# So_long
 
 The purpose of this project is to develop a very small 2D game using minilibX - a graphic library which enables: <br>
 Get keyboard and mouse input, manages screen, keyboard and mouse. <br>
