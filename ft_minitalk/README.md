@@ -19,8 +19,9 @@ It is an introductory project for the bigger UNIX projects that will appear late
 
 Clone [`Libft`](https://github.com/carlarfranca/42Projects/tree/main/ft_libft/Libft_Commented) repo  in the `src` folder <br>
 `make` to compile files <br>
+`make clean` to remove objects
+`make fclean` to remove objects and binary files
 
 ### Implementation 
 
 `./server` and `./client [pid number] "string"` on simultaneous terminals to start program.<br>
-`make fclean` to remove objects and binary files <br>
